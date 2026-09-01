@@ -20,7 +20,7 @@ Raw multi-table transactional data was loaded and staged in **Snowflake Data Clo
 
 * **Data Ingestion & Staging:** Structured CSV order, customer, and shipping data ingested into Snowflake staging tables (`STG_SUPPLY_CHAIN_ORDERS`).
 * **Data Modeling (Star Schema):** Modeled dimensional entities using SQL views within Snowflake to optimize querying performance:
-  * `FACT_SALES`: Transactional grain storing orders, net revenue, profit, shipping delays, and line-item metrics.
+  * `FACT_SALES`: Transactional storing orders, net revenue, profit, shipping delays, and line-item metrics.
   * `DIM_DATE`: Centralized calendar dimension with chronological sorting keys (`YearMonthKey`).
   * `DIM_ORDER`: Order status, shipping modes, payment types, and geographical hierarchies.
   * `DIM_PRODUCT`: Product categories, departments, and unit pricing.
@@ -67,11 +67,61 @@ Focuses on product portfolio profitability, regional contribution, and discount 
 
 ---
 
+
 ## DAX Measures Created
 
-### 1. Total Net Sales
-```dax
+```
 Total Net Sales = SUM(FACT_SALES[NET_SALES_AMOUNT])
 
-**### 2. Total Profit**
 Total Profit = SUM(FACT_SALES[ORDER_PROFIT])
+
+Profit Margin % = DIVIDE([Total Profit], [Total Net Sales], 0)
+
+Late Delivery Risk % = 
+DIVIDE(
+    CALCULATE(COUNTROWS(FACT_SALES), FACT_SALES[DELIVERY_STATUS] = "Late delivery"),
+    COUNTROWS(FACT_SALES),
+    0
+)
+
+On-Time Delivery Rate % = 
+DIVIDE(
+    CALCULATE(COUNTROWS(FACT_SALES), FACT_SALES[DELIVERY_STATUS] IN {"Shipping on time", "Advance shipping"}),
+    COUNTROWS(FACT_SALES),
+    0
+)
+```
+
+---
+
+## Repository Structure
+
+```
+├── sql/
+│   ├── 01_snowflake_staging.sql   # Snowflake DDL and staging ingestion scripts
+│   └── 02_star_schema_views.sql   # SQL transformation views (Dimension & Fact tables)
+├── data/
+│   └── DataCoSupplyChainDataset_SampleData.csv      # Raw transactional dataset
+├── pbix/
+│   └── Supply_Chain_BI.pbix # Interactive Power BI report file
+├── screenshots/
+│   ├── 01_executive_overview.png
+│   ├── 02_supply_chain_logistics.png
+│   └── 03_customer_financial_deep_dive.png
+└── README.md                      # Project documentation
+---
+
+## Author
+
+**Josyula Sai Krishna Priya**  
+Data Analyst | Power BI | SQL | Python  
+jskp2001@gmail.com  
+https://jpriya15.github.io/jpriya15.github.io.portfolio-/
+
+---
+
+*This is a portfolio project built using a publicly available HR dataset to demonstrate People Analytics capabilities.*
+
+
+
+
