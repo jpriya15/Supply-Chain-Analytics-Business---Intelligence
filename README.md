@@ -12,7 +12,7 @@ Raw multi-table transactional data was loaded and staged in **Snowflake Data Clo
 
 * **Tools Used:** Snowflake, SQL, Power BI Desktop, Power Query (ETL), DAX
 * **Domain:** Supply Chain, Logistics & Sales Analytics
-* **Architecture:** Snowflake Data Warehouse $\rightarrow$ Star Schema Modeling $\rightarrow$ Power BI BI Layer
+* **Architecture:** Snowflake Data Warehouse $\rightarrow$ Star Schema Modeling $\rightarrow$ Power BI
 
 ---
 
@@ -61,7 +61,7 @@ Focuses on operational fulfillment, lead times, scheduled vs. actual delivery pe
 ### Page 3: Customer & Financial Deep-Dive
 Focuses on product portfolio profitability, regional contribution, and discount sensitivity.
 * **Treemap:** Revenue and Profit Contribution across global countries.
-* **Scatter Plot:** Discount Sensitivity vs. Profit Margin % by product category (highlighting high-margin vs. margin-diluting discount thresholds).
+* **Scatter Plot:** Discount Sensitivity vs. Profit Margin % by product category 
 * **Decomposition Tree:** Interactive root-cause breakdown of Total Profit ($3.97M) across `Department Name` $\rightarrow$ `Category Name` $\rightarrow$ `Product Name`.
 * **Slicers:** `DEPARTMENT_NAME` selector and `Order Profit Segment` buttons (`Loss-Making` vs. `Profitable`).
 
@@ -104,9 +104,9 @@ DIVIDE(
 ├── pbix/
 │   └── Supply_Chain_BI.pbix # Interactive Power BI report file
 ├── screenshots/
-│   ├── 01_executive_overview.png
-│   ├── 02_supply_chain_logistics_performance.png
-│   └── 03_customer_financial_deep_dive.png
+│   ├── 01_Executive_Overview.png
+│   ├── 02_Supply_Chain_Logistics_Performance.png
+│   └── 03_Customer_Financial_Deep_Dive.png
 └── README.md                      # Project documentation
 ```
 
