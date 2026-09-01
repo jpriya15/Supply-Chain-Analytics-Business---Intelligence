@@ -98,16 +98,16 @@ DIVIDE(
 
 ```
 ├── sql/
-│   ├── Snowflake_Supply_Chain.sql # Complete Snowflake DDL, staging ETL, and Star Schema script
+│   ├── Snowflake_Supply_Chain.sql               # Complete Snowflake DDL, staging ETL, and Star Schema script
 ├── data/
-│   └── DataCoSupplyChainDataset_SampleData.csv # Raw transactional dataset
+│   └── DataCoSupplyChainDataset_SampleData.csv  # Raw transactional dataset
 ├── pbix/
-│   └── Supply_Chain_BI.pbix # Interactive Power BI report file
+│   └── Supply_Chain_BI.pbix                     # Interactive Power BI report file
 ├── screenshots/
 │   ├── 01_Executive_Overview.png
 │   ├── 02_Supply_Chain_Logistics_Performance.png
 │   └── 03_Customer_Financial_Deep_Dive.png
-└── README.md                      # Project documentation
+└── README.md                                    # Project documentation
 ```
 
 ---
