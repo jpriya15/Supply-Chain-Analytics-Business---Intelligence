@@ -103,7 +103,7 @@ DIVIDE(
 │   └── DataCoSupplyChainDataset_SampleData.csv  # Raw transactional dataset
 ├── pbix/
 │   └── Supply_Chain_BI.pbix                     # Interactive Power BI report file
-├── screenshots/
+├── Dashboard_Screenshots/
 │   ├── 01_Executive_Overview.png
 │   ├── 02_Supply_Chain_Logistics_Performance.png
 │   └── 03_Customer_Financial_Deep_Dive.png
