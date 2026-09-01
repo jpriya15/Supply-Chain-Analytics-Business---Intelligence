@@ -1,6 +1,6 @@
-## Dashboard Pages
+Dashboard Images
 
-### Page 1: Executive Overview
+Image 1: Executive Overview
 Focuses on high-level commercial growth, sales mix, top-performing product lines, and chronological revenue momentum.
 * **KPI Cards:** Total Net Sales ($33.05M), Total Profit ($3.97M), Total Orders (66K), Profit Margin % (12.00%), On-Time Delivery Rate % (45.18%).
 * **Donut Chart:** Net Sales distribution across Customer Segments (`Consumer`, `Corporate`, `Home Office`).
@@ -8,9 +8,8 @@ Focuses on high-level commercial growth, sales mix, top-performing product lines
 * **Line & Clustered Column Chart:** Monthly Net Sales and Profit Margin % Trend across a continuous timeline.
 * **Slicers:** Year tiles and Global Market tiles.
 
----
 
-### Page 2: Supply Chain & Logistics Performance
+Image 2: Supply Chain & Logistics Performance
 Focuses on operational fulfillment, lead times, scheduled vs. actual delivery performance, and geographic delivery risks.
 * **KPI Cards:** Average Actual Shipping Days (3.5), Average Scheduled Shipping Days (2.9), Average Shipping Delay Days (0.6), Late Delivery Risk % (54.82%).
 * **Donut Chart:** Order volume breakdown by Delivery Status (`Late delivery`, `Advance shipping`, `Shipping on time`, `Shipping canceled`).
@@ -18,9 +17,8 @@ Focuses on operational fulfillment, lead times, scheduled vs. actual delivery pe
 * **Clustered Bar Chart:** Actual vs. Scheduled Shipping Days compared across Shipping Modes (`Standard Class`, `Second Class`, `First Class`, `Same Day`).
 * **Slicers:** Symmetrical 2x2 grid for `SHIPPING_MODE` and structured list for `ORDER_REGION`.
 
----
 
-### Page 3: Customer & Financial Deep-Dive
+Image 3: Customer & Financial Deep-Dive
 Focuses on product portfolio profitability, regional contribution, and discount sensitivity.
 * **Treemap:** Revenue and Profit Contribution across global countries.
 * **Scatter Plot:** Discount Sensitivity vs. Profit Margin % by product category 
