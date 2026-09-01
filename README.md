@@ -10,7 +10,7 @@ This project delivers an end-to-end cloud business intelligence and data analyti
 
 Raw multi-table transactional data was loaded and staged in **Snowflake Data Cloud**, modeled into structured dimension and fact views via **SQL**, and connected to **Power BI** for advanced DAX modeling, ETL transformation, and executive dashboard design.
 
-* **Tools Used:** Snowflake, SQL, Power BI Desktop, Power Query (ETL), DAX, Excel
+* **Tools Used:** Snowflake, SQL, Power BI Desktop, Power Query (ETL), DAX
 * **Domain:** Supply Chain, Logistics & Sales Analytics
 * **Architecture:** Snowflake Data Warehouse $\rightarrow$ Star Schema Modeling $\rightarrow$ Power BI BI Layer
 
@@ -98,17 +98,18 @@ DIVIDE(
 
 ```
 ├── sql/
-│   ├── 01_snowflake_staging.sql   # Snowflake DDL and staging ingestion scripts
-│   └── 02_star_schema_views.sql   # SQL transformation views (Dimension & Fact tables)
+│   ├── Snowflake_Supply_Chain.sql # Complete Snowflake DDL, staging ETL, and Star Schema script
 ├── data/
-│   └── DataCoSupplyChainDataset_SampleData.csv      # Raw transactional dataset
+│   └── DataCoSupplyChainDataset_SampleData.csv # Raw transactional dataset
 ├── pbix/
 │   └── Supply_Chain_BI.pbix # Interactive Power BI report file
 ├── screenshots/
 │   ├── 01_executive_overview.png
-│   ├── 02_supply_chain_logistics.png
+│   ├── 02_supply_chain_logistics_performance.png
 │   └── 03_customer_financial_deep_dive.png
 └── README.md                      # Project documentation
+```
+
 ---
 
 ## Author
