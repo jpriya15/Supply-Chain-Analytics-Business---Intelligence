@@ -1,4 +1,4 @@
-
+```
 ---
 
 ## Dashboard Pages
@@ -31,7 +31,7 @@ Focuses on product portfolio profitability, regional contribution, and discount 
 * **Slicers:** `DEPARTMENT_NAME` selector and `Order Profit Segment` buttons (`Loss-Making` vs. `Profitable`).
 
 ---
-
+```
 
 ## DAX Measures Created
 
